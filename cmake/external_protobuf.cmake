@@ -129,7 +129,7 @@ else()
         GIT_TAG ${NGRAPH_PROTOBUF_GIT_TAG}
         UPDATE_COMMAND ""
         PATCH_COMMAND ""
-        CONFIGURE_COMMAND ./autogen.sh COMMAND ./configure ${PROTOBUF_SYSTEM_PROTOC} CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER} --prefix=${EXTERNAL_PROJECTS_ROOT}/protobuf --disable-shared
+        CONFIGURE_COMMAND ./autogen.sh COMMAND ./configure ${PROTOBUF_SYSTEM_PROTOC} CXX=${CMAKE_CXX_COMPILER} --prefix=${EXTERNAL_PROJECTS_ROOT}/protobuf --disable-shared
         BUILD_COMMAND ${MAKE_UTIL} "${BUILD_FLAGS}"
         TMP_DIR "${EXTERNAL_PROJECTS_ROOT}/protobuf/tmp"
         STAMP_DIR "${EXTERNAL_PROJECTS_ROOT}/protobuf/stamp"
