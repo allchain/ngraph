@@ -179,7 +179,12 @@ bool runtime::gcpu::GCPUExecutable::call(const vector<shared_ptr<runtime::Tensor
         {
             m_timer_map[op].start();
         }
+        stopwatch timer;
+        timer.start();
+        cout << *op << "...";
+        cout.flush();
         generate_calls(type, *op, op_outputs, op_inputs);
+        cout << "done " << timer.get_milliseconds() << endl;
         if (m_performance_counters_enabled)
         {
             m_timer_map[op].stop();
