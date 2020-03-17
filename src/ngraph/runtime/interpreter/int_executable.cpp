@@ -60,8 +60,7 @@ runtime::interpreter::OP_TYPEID runtime::interpreter::INTExecutable::get_typeid(
 
 runtime::interpreter::INTExecutable::INTExecutable(const shared_ptr<Function>& function,
                                                    bool enable_performance_collection)
-    : m_is_compiled{true}
-    , m_performance_counters_enabled{enable_performance_collection}
+    : m_performance_counters_enabled{enable_performance_collection}
 {
 #ifdef INTERPRETER_FORCE_SERIALIZE
     // To verify that the serializer works correctly let's just run this graph round-trip
@@ -87,8 +86,7 @@ runtime::interpreter::INTExecutable::INTExecutable(const shared_ptr<Function>& f
 }
 
 runtime::interpreter::INTExecutable::INTExecutable(const std::string& model_string)
-    : m_is_compiled{true}
-    , m_performance_counters_enabled{false}
+    : m_performance_counters_enabled{false}
 {
     m_function = deserialize(model_string);
     for (auto node : m_function->get_ordered_ops())
@@ -96,6 +94,11 @@ runtime::interpreter::INTExecutable::INTExecutable(const std::string& model_stri
         m_nodes.push_back(node);
     }
     set_parameters_and_results(*m_function);
+}
+
+runtime::interpreter::INTExecutable::INTExecutable()
+    : m_performance_counters_enabled{false}
+{
 }
 
 bool runtime::interpreter::INTExecutable::call(const vector<shared_ptr<runtime::Tensor>>& outputs,

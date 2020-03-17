@@ -39,8 +39,23 @@ using descriptor::layout::DenseTensorLayout;
 
 runtime::gcpu::GCPUExecutable::GCPUExecutable(const shared_ptr<Function>& function,
                                               bool enable_performance_collection)
-    : INTExecutable(function, enable_performance_collection)
+    : INTExecutable()
 {
+    m_function = clone_function(*function);
+    pass::Manager pass_manager;
+    pass_manager.register_pass<pass::LikeReplacement>();
+    pass_manager.register_pass<pass::FusedOpDecomposition>();
+    pass_manager.register_pass<pass::Opset0Downgrade>();
+    // Need to decompose any v0 fused ops, which were produced by the downgrade pass
+    pass_manager.register_pass<pass::FusedOpDecomposition>();
+    pass_manager.register_pass<pass::AssignLayout<DenseTensorLayout>>();
+    pass_manager.register_pass<pass::Liveness>();
+    pass_manager.run_passes(m_function);
+    for (auto node : m_function->get_ordered_ops())
+    {
+        m_nodes.push_back(node);
+    }
+    set_parameters_and_results(*m_function);
 }
 
 bool runtime::gcpu::GCPUExecutable::call(const vector<shared_ptr<runtime::Tensor>>& outputs,

@@ -173,11 +173,11 @@ public:
 
 protected:
     INTExecutable(const std::string& model_string);
+    INTExecutable();
 
     std::shared_ptr<ngraph::op::Parameter> get_parameter(size_t index) const;
     std::shared_ptr<ngraph::op::Result> get_result(size_t index) const;
     int get_alignment() const { return 64; }
-    bool m_is_compiled = false;
     bool m_nan_check_enabled = false;
     bool m_performance_counters_enabled = false;
     std::shared_ptr<Function> m_function;
