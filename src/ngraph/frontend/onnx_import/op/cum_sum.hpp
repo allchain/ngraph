@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector cum_sum(const Node& node);
+                NGRAPH_API NodeVector cum_sum(const Node& node);
 
             } // namespace set_1
 

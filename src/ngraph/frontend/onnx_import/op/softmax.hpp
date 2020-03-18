@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector softmax(const Node& node);
+                NGRAPH_API NodeVector softmax(const Node& node);
 
             } // namespace set_1
 

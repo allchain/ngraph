@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector constant(const Node& node);
+                NGRAPH_API NodeVector constant(const Node& node);
 
             } // namespace set_1
 

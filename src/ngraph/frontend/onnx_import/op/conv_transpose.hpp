@@ -33,7 +33,7 @@ namespace ngraph
                 ///
                 /// \return The vector containing Ngraph nodes producing output of ONNX convolution
                 ///         operation.
-                NodeVector conv_transpose(const Node& node);
+                NGRAPH_API NodeVector conv_transpose(const Node& node);
 
             } // namespace set_1
 

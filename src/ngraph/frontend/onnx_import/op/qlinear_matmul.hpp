@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector qlinear_matmul(const Node& node);
+                NGRAPH_API NodeVector qlinear_matmul(const Node& node);
             } // namespace set_1
 
         } // namespace op

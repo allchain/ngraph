@@ -36,7 +36,7 @@ namespace ngraph
         {
             namespace node
             {
-                struct UnknownAttribute : ngraph_error
+                struct NGRAPH_API UnknownAttribute : ngraph_error
                 {
                     explicit UnknownAttribute(const std::string& node, const std::string& name)
                         : ngraph_error{"Node (" + node + "): unknown attribute \'" + name + "\'"}

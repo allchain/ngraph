@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector quantize_linear(const Node& node);
+                NGRAPH_API NodeVector quantize_linear(const Node& node);
 
             } // namespace set_1
 

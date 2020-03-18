@@ -45,6 +45,7 @@ namespace ngraph
             ///
             /// \return     A vector containing new, valid node shape.
             ///
+            NGRAPH_API
             std::vector<std::size_t> infer_dimensions(const std::string& node_name,
                                                       const std::vector<std::size_t>& input_shape,
                                                       const std::vector<std::size_t>& output_shape);
@@ -59,6 +60,7 @@ namespace ngraph
             ///
             /// \return     Original node or a node representing a reshape of the original.
             ///
+            NGRAPH_API
             std::shared_ptr<ngraph::Node>
                 interpret_as_scalar(const std::shared_ptr<ngraph::Node>& node);
 

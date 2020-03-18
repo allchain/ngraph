@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector flatten(const Node& node);
+                NGRAPH_API NodeVector flatten(const Node& node);
 
             } // namespace set_1
 

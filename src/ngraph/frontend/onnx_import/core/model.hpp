@@ -27,7 +27,7 @@ namespace ngraph
 {
     namespace onnx_import
     {
-        class Model
+        class NGRAPH_API Model
         {
         public:
             Model() = delete;

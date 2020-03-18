@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector shape(const Node& node);
+                NGRAPH_API NodeVector shape(const Node& node);
 
             } // namespace set_1
 

@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector cos(const Node& node);
+                NGRAPH_API NodeVector cos(const Node& node);
             }
         }
 

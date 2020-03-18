@@ -38,7 +38,7 @@ namespace ngraph
                 ///
                 /// \return     Vector of nodes containting resulting nGraph nodes.
                 ///
-                NodeVector instance_norm(const Node& node);
+                NGRAPH_API NodeVector instance_norm(const Node& node);
             } // namespace set_1
 
         } // namespace op

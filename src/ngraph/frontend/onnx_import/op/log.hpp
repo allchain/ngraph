@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector log(const Node& node);
+                NGRAPH_API NodeVector log(const Node& node);
             }
         }
 

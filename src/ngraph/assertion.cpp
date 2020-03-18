@@ -14,31 +14,7 @@
 // limitations under the License.
 //*****************************************************************************
 
-#pragma once
 
-#include "core/node.hpp"
-#include "ngraph/node.hpp"
+#include "ngraph/assertion.hpp"
 
-namespace ngraph
-{
-    namespace onnx_import
-    {
-        namespace op
-        {
-            namespace set_1
-            {
-                /// \brief Performs ONNX MatMulInteger operation.
-                ///
-                /// \param node The ONNX node object representing this operation.
-                ///
-                /// \return The vector containing Ngraph nodes producing output of quantized ONNX
-                ///         matrix multiplication operation.
-                NGRAPH_API NodeVector matmul_integer(const Node& node);
-
-            } // namespace set_1
-
-        } // namespace op
-
-    } // namespace onnx_import
-
-} // namespace ngraph
+const char* ngraph::AssertionFailure::what() const noexcept { return m_what.c_str(); }

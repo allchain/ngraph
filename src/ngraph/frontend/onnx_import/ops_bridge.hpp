@@ -60,7 +60,7 @@ namespace ngraph
 
         } // namespace error
 
-        class OperatorsBridge
+        class NGRAPH_API OperatorsBridge
         {
         public:
             static constexpr const int LATEST_SUPPORTED_ONNX_OPSET_VERSION = ONNX_OPSET_VERSION;

@@ -38,7 +38,7 @@ namespace ngraph
         {
             namespace detail
             {
-                AxisSet get_reduction_axes(const Node& node);
+                NGRAPH_API AxisSet get_reduction_axes(const Node& node);
 
             } // namespace  detail
 
@@ -60,6 +60,7 @@ namespace ngraph
             ///
             /// \return     nGraph node equivalent of the ONNX operation.
             ///
+            NGRAPH_API
             std::shared_ptr<ngraph::Node>
                 make_ng_reduction_op(const Node& node,
                                      const std::shared_ptr<ngraph::Node>& ng_input,
@@ -75,6 +76,7 @@ namespace ngraph
             ///
             /// \return     nGraph node equivalent of the ONNX operation.
             ///
+            NGRAPH_API
             std::shared_ptr<ngraph::Node>
                 make_ng_reduction_op(const Node& node,
                                      const std::shared_ptr<ngraph::Node>& ng_input,

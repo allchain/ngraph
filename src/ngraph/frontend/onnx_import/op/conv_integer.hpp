@@ -33,7 +33,7 @@ namespace ngraph
                 ///
                 /// \return The vector containing Ngraph nodes producing output of quantized ONNX
                 ///         convolution operation.
-                NodeVector conv_integer(const Node& node);
+                NGRAPH_API NodeVector conv_integer(const Node& node);
 
             } // namespace set_1
 

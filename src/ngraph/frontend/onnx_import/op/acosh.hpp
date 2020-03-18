@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector acosh(const Node& node);
+                NGRAPH_API NodeVector acosh(const Node& node);
             } // namespace set_1
 
         } // namespace op

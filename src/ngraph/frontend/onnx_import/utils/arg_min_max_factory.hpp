@@ -29,7 +29,7 @@ namespace ngraph
         namespace utils
         {
             /// \brief  Factory class which generates sub-graphs for ONNX ArgMin, ArgMax ops.
-            class ArgMinMaxFactory
+            class NGRAPH_API ArgMinMaxFactory
             {
             public:
                 explicit ArgMinMaxFactory(const Node& node);

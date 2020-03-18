@@ -30,7 +30,7 @@ namespace ngraph
 {
     namespace onnx_import
     {
-        class Graph
+        class NGRAPH_API Graph
         {
         public:
             Graph(const onnx::GraphProto& proto, Model& model);

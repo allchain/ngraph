@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector batch_norm(const Node& node);
+                NGRAPH_API NodeVector batch_norm(const Node& node);
 
             } // namespace set_1
 

@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector round(const Node& node);
+                NGRAPH_API NodeVector round(const Node& node);
 
             } // namespace set_1
 

@@ -45,7 +45,7 @@ namespace ngraph
             ///             paddings, kernel shape and auto_pad type.
             ///
             /// \see        GlobalPoolingFactory
-            class PoolingFactory
+            class NGRAPH_API PoolingFactory
             {
             public:
                 virtual ~PoolingFactory() = default;
@@ -79,7 +79,7 @@ namespace ngraph
             /// \brief      Factory class which generates sub-graphs for ONNX 'local' pooling
             ///             operators.
             /// \note       For a 'local' pooling operation, the kernel shape attribute is required
-            class LocalPoolingFactory : public PoolingFactory
+            class NGRAPH_API LocalPoolingFactory : public PoolingFactory
             {
             public:
                 explicit LocalPoolingFactory(const Node& node);
@@ -91,7 +91,7 @@ namespace ngraph
             ///             operators.
             /// \note       In a 'global' pooling operation, the kernel shape is calculated
             ///             based on spatial dims
-            class GlobalPoolingFactory : public PoolingFactory
+            class NGRAPH_API GlobalPoolingFactory : public PoolingFactory
             {
             public:
                 explicit GlobalPoolingFactory(const Node& node);

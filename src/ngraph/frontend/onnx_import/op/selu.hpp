@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector selu(const Node& node);
+                NGRAPH_API NodeVector selu(const Node& node);
 
             } // namespace set_1
 

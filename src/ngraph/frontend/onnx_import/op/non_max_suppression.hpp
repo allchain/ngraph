@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector non_max_suppression(const Node& node);
+                NGRAPH_API NodeVector non_max_suppression(const Node& node);
             } // namespace set_1
 
         } // namespace op

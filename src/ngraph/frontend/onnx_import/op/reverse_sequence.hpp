@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector reverse_sequence(const Node& node);
+                NGRAPH_API NodeVector reverse_sequence(const Node& node);
 
             } // namespace set_1
 

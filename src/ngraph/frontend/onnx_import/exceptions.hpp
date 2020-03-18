@@ -31,7 +31,7 @@ namespace ngraph
         {
             namespace detail
             {
-                std::string get_error_msg_prefix(const Node& node);
+                NGRAPH_API std::string get_error_msg_prefix(const Node& node);
             }
 
             struct NotSupported : AssertionFailure

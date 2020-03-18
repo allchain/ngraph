@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector hard_sigmoid(const Node& node);
+                NGRAPH_API NodeVector hard_sigmoid(const Node& node);
 
             } // namespace set_1
 

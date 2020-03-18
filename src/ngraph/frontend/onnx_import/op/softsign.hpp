@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector softsign(const Node& node);
+                NGRAPH_API NodeVector softsign(const Node& node);
 
             } // namespace set_1
 

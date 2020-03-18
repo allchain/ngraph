@@ -31,20 +31,20 @@ namespace ngraph
             ///
             /// \param node The Node ptr representing Conv or Pool operation.
             /// \return The kernel Shape object representing its dimensions (height, width, depth).
-            Shape get_kernel_shape(const Node& node);
+            NGRAPH_API Shape get_kernel_shape(const Node& node);
 
             /// \brief  Get number of pixels to stride operation by in each direction.
             ///
             /// \param node The Node ptr representing Conv or Pool operation.
             /// \return The kernel Shape object representing its dimensions (height, width, depth).
-            Strides get_strides(const Node& node);
+            NGRAPH_API Strides get_strides(const Node& node);
 
             /// \brief Get number of pixels for filter dilation in each direction.
             ///
             /// \param node The Node ptr representing ONNX operation.
             /// \return The Strides object containing number of pixels for filter dilation
             ///         (height, width, depth).
-            Strides get_dilations(const Node& node);
+            NGRAPH_API Strides get_dilations(const Node& node);
 
             /// \brief Get padding values for the operation described by an ONNX node.
             /// \details Values are taken from the `pads` attribute.
@@ -56,6 +56,7 @@ namespace ngraph
             ///
             /// \return A pair of (padding_above, padding_below), which elements contains number of
             ///         pixels to pad in respective dimensions (height, width, depth).
+            NGRAPH_API
             std::pair<CoordinateDiff, CoordinateDiff> get_pads(const Node& node,
                                                                const size_t kernel_rank);
 
@@ -82,6 +83,7 @@ namespace ngraph
             /// \param[in,out] padding_above  The paddings above axis.
             ///
             /// \see        ngraph::op::PadType
+            NGRAPH_API
             void calculate_auto_pads(const Shape& data_shape,
                                      const Shape& filter_shape,
                                      const Strides& strides,
@@ -96,7 +98,7 @@ namespace ngraph
             ///
             /// \return     The nGraph PadType object representing 'auto_pad' attribute value.
             ///
-            ngraph::op::PadType get_auto_pad(const Node& node);
+            NGRAPH_API ngraph::op::PadType get_auto_pad(const Node& node);
 
         } // namespace convpool
 

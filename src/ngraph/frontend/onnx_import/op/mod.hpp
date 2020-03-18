@@ -27,7 +27,7 @@ namespace ngraph
         {
             namespace set_1
             {
-                NodeVector mod(const Node& node);
+                NGRAPH_API NodeVector mod(const Node& node);
             } // namespace set_1
 
         } // namespace op
